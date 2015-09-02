@@ -8,4 +8,5 @@ services:
 before_install:
 - docker info
 - docker run --rm busybox echo "Hello Docker"
+- docker run -d --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=moneygr -e POSTGRES_USER=moneygr -e LC_ALL=C.UTF-8 postgres
 - docker ps -a
